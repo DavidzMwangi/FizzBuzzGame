@@ -20,6 +20,6 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
 
 Route::group(['namespace'=>'Api'],function (){
     Route::get('generate/{number}','GameController@generate');
-
+    Route::get('generate_between/{start}/{end}','GameController@generateBetween');
 });
 
